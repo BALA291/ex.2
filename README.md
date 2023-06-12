@@ -25,20 +25,43 @@ The result is that combinational logic circuits have no feedback, and any change
 5.	For different input combinations, generate the timing diagram.
 
 ## Simplification:
+![f1 ex2](https://github.com/BALA291/ex.2/assets/120717501/d0adf6a0-b171-42fa-9b94-8a8541fbb3b1)
+
+![f2 ex2](https://github.com/BALA291/ex.2/assets/120717501/c0f55a97-727f-4e40-a63e-1af94d91a01c)
 
 ## Truth Table:
+![f1 ex2 t](https://github.com/BALA291/ex.2/assets/120717501/38570151-47b6-4fb6-96f9-3090480b4915)
+
 
 ## Program:
-
+```
+module ex2(a,b,c,d,F1,F2);
+input a,b,c,d;
+output F1,F2;
+wire p,q,r,s,t,u,v,x,y,w;
+not(p,c);
+not(t,b);
+not(u,d);
+not(y,a);
+and(q,p,d);
+and(r,a,c);
+and(s,b,c); 
+or(F2,q,r,s);
+and(v,t,u);
+and(w,a,b,p);
+and(x,y,b,d);
+or(F1,v,w,x);
+endmodule
+```
 
 ## RTL Schematic:
 
-
+![logic ex2](https://github.com/BALA291/ex.2/assets/120717501/87f8eacc-7fb1-47b7-9ef8-6f526d8b4457)
 
 
 ## Timing Diagram:
 
-
+![waveform ex2](https://github.com/BALA291/ex.2/assets/120717501/011baaa8-e7e0-4b24-ad95-ab8f05519227)
 
 
 ## Result:
